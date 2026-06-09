@@ -301,6 +301,43 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 .dots{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:50;display:flex;gap:8px;}
 .dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.22);cursor:pointer;transition:all .25s ease;border:none;padding:0;}
 .dot.active{background:#8fb2ff;transform:scale(1.35);}
+
+/* geometry side-by-side + workstream split table */
+.geo-row{display:flex;gap:22px;width:100%;max-width:1280px;margin-bottom:12px;}
+.geo-card{flex:1;border-radius:16px;padding:13px 20px 12px;display:flex;flex-direction:column;align-items:center;border:1px solid rgba(30,43,62,.12);background:#fff;}
+.geo-card.wrong{background:#fdf2ee;border-color:rgba(217,119,6,.4);}
+.geo-card.right{background:#eef7f1;border-color:rgba(5,150,105,.35);}
+.geo-tag{font-size:.62rem;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;padding:4px 12px;border-radius:6px;margin-bottom:12px;}
+.geo-tag.wrong{color:#b45309;background:rgba(217,119,6,.14);}
+.geo-tag.right{color:#047857;background:rgba(5,150,105,.14);}
+.mini-chart{display:flex;flex-direction:column;align-items:center;flex:1;justify-content:center;width:100%;}
+.mc-box{background:#fff;border:1px solid rgba(30,43,62,.22);border-radius:9px;padding:7px 14px;font-size:.74rem;font-weight:600;color:var(--text-dark);text-align:center;box-shadow:0 2px 6px rgba(30,43,62,.06);}
+.mc-box.boss{background:var(--primary);color:#fff;border-color:var(--primary);}
+.mc-row{display:flex;gap:9px;margin-top:13px;flex-wrap:wrap;justify-content:center;}
+.mc-vline{width:2px;height:16px;background:rgba(30,43,62,.3);}
+.mc-ai{background:rgba(217,119,6,.16);border:1.5px solid var(--orange);color:#b45309;position:relative;}
+.mc-ai::after{content:"\2715";position:absolute;top:-9px;right:-9px;width:18px;height:18px;border-radius:50%;background:#dc2626;color:#fff;font-size:.58rem;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 5px rgba(220,38,38,.4);}
+.mc-box.owner{border-color:var(--green);box-shadow:0 0 0 2px rgba(5,150,105,.18);}
+.mc-owner-tag{display:inline-block;font-size:.5rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:#047857;background:rgba(5,150,105,.16);border-radius:4px;padding:1px 5px;margin-left:5px;vertical-align:middle;}
+.mc-dline{width:2px;height:16px;margin-top:9px;background:repeating-linear-gradient(to bottom,#059669 0 4px,transparent 4px 8px);}
+.mc-chip{margin-top:9px;border:1.5px dashed rgba(5,150,105,.7);background:rgba(5,150,105,.08);color:#047857;border-radius:9px;padding:6px 13px;font-size:.71rem;font-weight:700;}
+.geo-cap{margin-top:10px;font-size:.76rem;line-height:1.45;color:var(--text-mid);text-align:center;max-width:340px;}
+.ws-table-wrap{width:100%;max-width:1280px;background:#fff;border:1px solid rgba(30,43,62,.12);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(30,43,62,.08);}
+.ws-th{background:var(--secondary);color:#fff;font-size:.76rem;font-weight:700;letter-spacing:.3px;padding:8px 18px;}
+.ws-table{width:100%;border-collapse:collapse;}
+.ws-table th{font-size:.58rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-mid);text-align:left;padding:6px 18px;border-bottom:1px solid rgba(30,43,62,.12);background:#f7f8fc;}
+.ws-table td{font-size:.8rem;color:var(--text-dark);padding:6px 18px;border-bottom:1px solid rgba(30,43,62,.07);}
+.ws-table tbody tr:last-child td{border-bottom:none;}
+.ws-table td:first-child{font-weight:700;}
+.tier{display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:.5px;padding:2px 8px;border-radius:5px;}
+.tier.t0{color:#6b7280;background:rgba(107,114,128,.14);}
+.tier.t1{color:#047857;background:rgba(5,150,105,.14);}
+.tier.t2{color:#1d4ed8;background:rgba(37,99,235,.14);}
+.tier.t3{color:#b45309;background:rgba(217,119,6,.14);}
+.ws-foot{font-size:.72rem;color:var(--text-mid);padding:9px 18px;background:#f7f8fc;border-top:1px solid rgba(30,43,62,.08);}
+.tier-key{display:flex;flex-wrap:wrap;align-items:center;gap:7px 16px;}
+.tier-key .tk-label{font-weight:700;color:var(--text-dark);}
+.tier-key .tk-item{display:inline-flex;align-items:center;gap:6px;}
 </style>
 </head>
 <body>
@@ -675,6 +712,63 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
   </div>
 </section>
 
+<!-- 8c · THE GEOMETRY, SIDE BY SIDE (static) -->
+<section class="slide slide--light" data-eyebrow="Where it goes|The geometry, side by side" data-logo="purple" style="justify-content:flex-start;padding:22px 80px 16px;">
+  <div class="bar" style="margin-bottom:10px;"></div>
+  <h2 class="sl-title" style="font-size:clamp(1.4rem,2.4vw,1.95rem);margin-bottom:6px;">The chart stays human. The split lives in a table.</h2>
+  <p class="sl-lede" style="font-size:.96rem;margin-bottom:10px;line-height:1.5;">An agent never gets a box in the reporting trunk &mdash; that&rsquo;s where accountability leaks. It hangs off one human owner; and what AI drafts versus where a human leads is set per workstream.</p>
+  <div class="geo-row">
+    <div class="geo-card wrong">
+      <div class="geo-tag wrong">&#10005; Wrong geometry</div>
+      <div class="mini-chart">
+        <div class="mc-box boss">CEO</div>
+        <div class="mc-vline"></div>
+        <div class="mc-row">
+          <div class="mc-box">Sales</div>
+          <div class="mc-box">Marketing</div>
+          <div class="mc-box">Ops</div>
+          <div class="mc-box mc-ai">&ldquo;Kevin&rdquo;<br>AI analyst</div>
+        </div>
+      </div>
+      <div class="geo-cap">A box implies a seat, a report, accountability. The agent holds none &mdash; so accountability quietly slides onto the machine.</div>
+    </div>
+    <div class="geo-card right">
+      <div class="geo-tag right">&#10003; Right geometry</div>
+      <div class="mini-chart">
+        <div class="mc-box boss">CEO</div>
+        <div class="mc-vline"></div>
+        <div class="mc-row">
+          <div class="mc-box">Sales</div>
+          <div class="mc-box owner">Operations<span class="mc-owner-tag">owner</span></div>
+          <div class="mc-box">Marketing</div>
+        </div>
+        <div class="mc-dline"></div>
+        <div class="mc-chip">&#11041; Engagement Health Monitor &middot; T1</div>
+      </div>
+      <div class="geo-cap">The trunk stays human. One agent, named for its workflow, hangs off one accountable owner by a dotted &ldquo;operates&rdquo; line.</div>
+    </div>
+  </div>
+  <div class="ws-table-wrap">
+    <div class="ws-th">What the org chart can&rsquo;t show &mdash; the human&ndash;AI split, set per workstream</div>
+    <table class="ws-table">
+      <thead><tr><th>Workstream</th><th>AI drafts</th><th>Human leads</th><th>Owner</th><th>Autonomy</th></tr></thead>
+      <tbody>
+        <tr><td>Calendar &amp; data sync</td><td>Keeps sources current</td><td>&mdash;</td><td>Mel</td><td><span class="tier t0">T0</span></td></tr>
+        <tr><td>Engagement health</td><td>Weekly risk scan</td><td>The client call</td><td>Sarah</td><td><span class="tier t1">T1</span></td></tr>
+        <tr><td>Proposals &amp; filings</td><td>First draft &amp; self-check</td><td>Approve &amp; send</td><td>Sarah</td><td><span class="tier t2">T2</span></td></tr>
+        <tr><td>Client outreach</td><td>Drafts the message</td><td>Every send</td><td>Mel</td><td><span class="tier t3">T3</span></td></tr>
+      </tbody>
+    </table>
+    <div class="ws-foot tier-key">
+      <span class="tk-label">Autonomy tiers &mdash; earned, not granted:</span>
+      <span class="tk-item"><span class="tier t0">T0</span> auto-silent</span>
+      <span class="tk-item"><span class="tier t1">T1</span> auto-notify</span>
+      <span class="tk-item"><span class="tier t2">T2</span> gated &middot; waits for approval</span>
+      <span class="tk-item"><span class="tier t3">T3</span> human-only</span>
+    </div>
+  </div>
+</section>
+
 <!-- EVIDENCE · Evidence · governance, live -->
 <section class="slide slide--ink" data-eyebrow="Where it goes|Evidence · governance, live">
   <div class="bar"></div>
@@ -711,6 +805,14 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
   <h2 class="sl-title" style="font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:14px;">The loop, live.</h2>
   <img class="ev-shot" src="assets/talk-evidence/learn.png" alt="System flagging a recurring pattern and asking for feedback">
   <p class="ev-sub">It flagged a pattern across <em>eight</em> sessions and asked to govern it &mdash; then asked how the session felt. That feedback is how the system learns how I work, and how I grow. Grist for the mill.</p>
+</section>
+
+<!-- EVIDENCE · content surfaced -->
+<section class="slide slide--ink" data-eyebrow="What I learned|Evidence · the loop produces">
+  <div class="bar"></div>
+  <h2 class="sl-title" style="font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:14px;">It mined this talk for me.</h2>
+  <img class="ev-shot" src="assets/talk-evidence/surfaced.png" alt="Proactive engine surfacing newsletter candidates, ranking the PIP lesson #1">
+  <p class="ev-sub">This morning &mdash; after I rebuilt these slides &mdash; the system surfaced my newsletter ideas on its own, and ranked the lesson I just gave you, <em>&ldquo;you can&rsquo;t put an agent on a PIP,&rdquo;</em> as the top story. The loop doesn&rsquo;t just learn. It produces.</p>
 </section>
 
 <!-- 16 · PLAYBOOK -->
