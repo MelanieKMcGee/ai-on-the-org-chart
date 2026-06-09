@@ -286,6 +286,14 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 .demo-overlay-video{width:96vw;height:90vh;object-fit:contain;border-radius:8px;box-shadow:0 30px 80px rgba(0,0,0,.6);background:#000;}
 .demo-overlay-close{position:fixed;top:24px;right:30px;z-index:201;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.55);color:#fff;font-size:1.9rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:inherit;}
 .demo-overlay-close:hover{background:rgba(255,255,255,.18);}
+.cloud{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 22px;max-width:1180px;margin:4px auto 0;line-height:1.05;}
+.cloud span{display:inline-block;white-space:nowrap;animation:cloudFloat var(--d,9s) ease-in-out infinite;animation-delay:var(--del,0s);will-change:transform;}
+.cloud .t1{font-size:clamp(1.5rem,2.7vw,2.5rem);font-weight:800;opacity:.96;}
+.cloud .t2{font-size:clamp(1rem,1.7vw,1.6rem);font-weight:700;opacity:.82;}
+.cloud .t3{font-size:clamp(.82rem,1.1vw,1.05rem);font-weight:500;opacity:.6;}
+.cloud .cw{color:#eef2f8;}.cloud .cb{color:#8fb2ff;}.cloud .cg{color:#7be3b8;}.cloud .ca{color:#ffd9a8;}
+@keyframes cloudFloat{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@media (prefers-reduced-motion:reduce){.cloud span{animation:none;}}
 .ev-shot{max-width:80vw;max-height:58vh;width:auto;height:auto;border-radius:12px;border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 70px rgba(0,0,0,.55);}
 .ev-sub{margin-top:20px;font-size:1.05rem;font-weight:300;opacity:.82;max-width:1040px;line-height:1.55;}
 .ev-sub em{color:#ffd9a8;font-style:italic;}
@@ -488,6 +496,68 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
       <div class="watch"><b>Watch for</b>The pause at the trust boundary before anything external moves.</div>
       <div class="watch"><b>Watch for</b>The outcome prompt at the end. The system asks what happened.</div>
     </div>
+  </div>
+</section>
+
+<!-- 12b · THE SYSTEM IN PARTS (word cloud) -->
+<section class="slide slide--dark" data-eyebrow="What I built|The system, in parts">
+  <div class="bar"></div>
+  <h2 class="sl-title" style="font-size:clamp(1.5rem,2.6vw,2.2rem);margin-bottom:6px;">This is what &ldquo;built&rdquo; actually looks like.</h2>
+  <p class="sl-lede" style="margin-bottom:20px;">Sixty-plus skills, a hundred-plus source-of-truth files, a handful of agents &mdash; all governed, all mine.</p>
+  <div class="cloud">
+    <span class="t2 cw" style="--d:9.2s;--del:3.3s">Session Debrief</span>
+    <span class="t2 cw" style="--d:8.9s;--del:4.9s">Scan Transcripts</span>
+    <span class="t2 cw" style="--d:10.0s;--del:4.8s">Weekly Reflect</span>
+    <span class="t3 ca" style="--d:11.4s;--del:2.4s">Calendar</span>
+    <span class="t2 cg" style="--d:8.8s;--del:4.8s">V&D Brief</span>
+    <span class="t3 cb" style="--d:9.1s;--del:3.7s">HubSpot</span>
+    <span class="t3 cw" style="--d:7.3s;--del:0.0s">Self-Annealing</span>
+    <span class="t2 cw" style="--d:9.7s;--del:3.7s">Team Profile</span>
+    <span class="t2 ca" style="--d:10.3s;--del:4.7s">Story Miner</span>
+    <span class="t3 cb" style="--d:11.1s;--del:3.4s">Review Agents</span>
+    <span class="t3 cw" style="--d:9.9s;--del:3.5s">Trust Tiers</span>
+    <span class="t3 cb" style="--d:10.9s;--del:4.4s">Workflow Chains</span>
+    <span class="t2 cw" style="--d:11.7s;--del:0.5s">Adoption Playbook</span>
+    <span class="t3 cw" style="--d:9.2s;--del:3.4s">Run Records</span>
+    <span class="t2 cw" style="--d:9.8s;--del:5.5s">Kickoff Prep</span>
+    <span class="t2 cb" style="--d:12.0s;--del:5.7s">Checkpoint</span>
+    <span class="t2 cb" style="--d:9.5s;--del:3.2s">Scan Chats</span>
+    <span class="t2 cg" style="--d:10.2s;--del:5.3s">People Review</span>
+    <span class="t3 cb" style="--d:9.6s;--del:0.7s">Outcome Capture</span>
+    <span class="t1 cw" style="--d:8.9s;--del:0.9s">Morning Briefing</span>
+    <span class="t3 cw" style="--d:7.9s;--del:4.0s">MCP</span>
+    <span class="t1 cb" style="--d:7.4s;--del:0.5s">Training-Video Studio</span>
+    <span class="t2 cb" style="--d:10.4s;--del:3.7s">Engagement Tracker</span>
+    <span class="t2 cb" style="--d:10.8s;--del:5.7s">Triage</span>
+    <span class="t2 cb" style="--d:8.9s;--del:4.2s">Pipeline Review</span>
+    <span class="t2 cw" style="--d:7.3s;--del:5.2s">Scan Email</span>
+    <span class="t3 cb" style="--d:11.1s;--del:3.1s">Source-of-Truth Files</span>
+    <span class="t1 cg" style="--d:7.3s;--del:3.0s">Opportunity Radar</span>
+    <span class="t3 ca" style="--d:12.4s;--del:4.7s">Event Triggers</span>
+    <span class="t1 cw" style="--d:10.2s;--del:2.2s">Proposal Generator</span>
+    <span class="t3 cb" style="--d:8.7s;--del:0.9s">Approval Gates</span>
+    <span class="t2 cb" style="--d:12.3s;--del:2.1s">File Locator</span>
+    <span class="t3 ca" style="--d:10.3s;--del:5.3s">PandaDoc</span>
+    <span class="t2 cg" style="--d:11.2s;--del:0.4s">Strategic Dashboard</span>
+    <span class="t2 cb" style="--d:11.9s;--del:1.7s">Participant Roster</span>
+    <span class="t3 cb" style="--d:10.0s;--del:1.0s">Drive</span>
+    <span class="t1 cw" style="--d:7.7s;--del:1.3s">Money Monday</span>
+    <span class="t2 cg" style="--d:11.2s;--del:3.9s">Goal Cascade</span>
+    <span class="t3 cw" style="--d:9.4s;--del:1.1s">Skills Registry</span>
+    <span class="t3 cg" style="--d:9.6s;--del:3.3s">SproutVideo</span>
+    <span class="t2 ca" style="--d:7.7s;--del:2.5s">Cascade Pricing</span>
+    <span class="t2 cw" style="--d:11.1s;--del:2.6s">Client Handoff</span>
+    <span class="t3 cw" style="--d:12.7s;--del:0.9s">PII Guard</span>
+    <span class="t2 cw" style="--d:10.5s;--del:0.3s">Harvest Tasks</span>
+    <span class="t2 ca" style="--d:7.2s;--del:4.0s">LinkedIn Drafting</span>
+    <span class="t3 cg" style="--d:9.4s;--del:0.6s">Voice Profile</span>
+    <span class="t2 cw" style="--d:7.6s;--del:3.4s">Session Prep</span>
+    <span class="t1 cw" style="--d:7.2s;--del:2.6s">Content Engine</span>
+    <span class="t1 cb" style="--d:10.9s;--del:0.4s">Sales-Meeting Prep</span>
+    <span class="t3 cb" style="--d:9.5s;--del:2.2s">Telnyx Fax</span>
+    <span class="t2 cb" style="--d:9.1s;--del:5.6s">Brand Asset Package</span>
+    <span class="t1 ca" style="--d:9.5s;--del:5.0s">Meeting Debrief</span>
+    <span class="t3 cw" style="--d:7.4s;--del:4.6s">Gmail</span>
   </div>
 </section>
 
