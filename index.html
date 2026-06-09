@@ -29,7 +29,10 @@ html,body{height:100%;overflow:hidden;background:var(--ink);font-family:'Poppins
 .slide--ink{background:var(--ink);color:var(--text-light);}
 
 /* eyebrow */
-.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;opacity:.4;margin-bottom:14px;}
+.eyebrow{font-size:.95rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:16px;opacity:1;}
+.eyebrow .eb-act{font-weight:800;opacity:.92;}
+.eyebrow .eb-dot{opacity:.4;margin:0 9px;font-weight:400;}
+.eyebrow .eb-sub{font-weight:600;opacity:.5;}
 .slide--light .eyebrow{color:var(--primary);opacity:.45;}
 
 /* accent bar */
@@ -304,7 +307,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 0b · THE WALL (opening, 3 steps) -->
-<section class="slide slide--dark" data-eyebrow="How this started" id="wallSlide">
+<section class="slide slide--dark" data-eyebrow="Opening|How this started" id="wallSlide">
   <div class="bar"></div>
   <h2 class="sl-title" style="max-width:1100px;">Last year, I hit a wall.</h2>
   <p class="close-line" id="wall1" style="font-size:clamp(1.3rem,2.5vw,2rem);font-weight:300;max-width:1020px;margin-top:6px;">Not a dramatic one &mdash; the slow kind, where you spend more time managing context than doing the actual work.</p>
@@ -322,7 +325,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 5 · FIVE STAGES (6 steps) -->
-<section class="slide slide--light" data-eyebrow="The maturity map" data-logo="purple" id="stagesSlide">
+<section class="slide slide--light" data-eyebrow="Orientation|The maturity map" data-logo="purple" id="stagesSlide">
   <div class="bar"></div>
   <h2 class="sl-title" style="margin-bottom:6px;">The five stages of AI maturity</h2>
   <p class="sl-lede" style="margin-bottom:10px;">Each stage fails in a predictable place. Knowing where saves you a quarter of wasted momentum.</p>
@@ -356,7 +359,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- EVIDENCE · Evidence · my real interface -->
-<section class="slide slide--ink" data-eyebrow="Evidence · my real interface">
+<section class="slide slide--ink" data-eyebrow="What I built|Evidence · my real interface">
   <div class="bar"></div>
   <h2 class="sl-title" style="font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:14px;">This is the actual thing.</h2>
   <img class="ev-shot" src="assets/talk-evidence/iface.jpg" alt="Mel working in her own AI operating system">
@@ -364,7 +367,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 2 · POST-AGENTIC DEFINED -->
-<section class="slide slide--purple" data-eyebrow="What I mean by post-agentic">
+<section class="slide slide--purple" data-eyebrow="What I built|Post-agentic, defined">
   <div class="q-mark">&ldquo;</div>
   <div class="bar"></div>
   <p class="def-text"><b>Post-agentic</b> does not mean agents are over. It means agents are no longer the novelty. They are <b>assumed infrastructure</b>, and the organization has been redesigned around that reality.</p>
@@ -373,7 +376,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 3 · AI-NATIVE IS NOT -->
-<section class="slide slide--light" data-eyebrow="Clearing the underbrush" data-logo="purple">
+<section class="slide slide--light" data-eyebrow="What I built|What 'AI-native' isn't" data-logo="purple">
   <div class="bar"></div>
   <h2 class="sl-title">"AI-native" does not mean what the vendors say it means.</h2>
   <div class="cols" style="margin-top:10px;">
@@ -402,7 +405,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 10 · FOUR LAYERS -->
-<section class="slide slide--dark" data-eyebrow="The anatomy" id="layersSlide">
+<section class="slide slide--dark" data-eyebrow="What I built|The anatomy" id="layersSlide">
   <div class="bar"></div>
   <h2 class="sl-title">Five layers, from model to accountability</h2>
   <p class="sl-lede">Think of it like a capable colleague: a brain, what it knows, a body to act, trained skills, and the rules it works under. AI is not so different &mdash; only the brain is rented. <b>You supply the intent, and the one thing it can never have is accountability.</b></p>
@@ -417,7 +420,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 7 · INTERFACE INVERSION (2 steps) -->
-<section class="slide slide--ink" data-eyebrow="The interface inversion" id="invSlide">
+<section class="slide slide--ink" data-eyebrow="What I built|The interface inversion" id="invSlide">
   <div class="bar"></div>
   <h2 class="sl-title" style="margin-bottom:4px;">You have been the integration layer.</h2>
   <div class="inv-panels">
@@ -452,7 +455,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 11 · ONE CHAIN (6 steps) -->
-<section class="slide slide--light" data-eyebrow="One workflow, end to end" data-logo="purple" id="chainSlide">
+<section class="slide slide--light" data-eyebrow="What I built|One workflow, end to end" data-logo="purple" id="chainSlide">
   <div class="bar"></div>
   <h2 class="sl-title" style="margin-bottom:4px;">A sales meeting, the post-agentic way</h2>
   <div class="chain" id="chainWrap">
@@ -473,7 +476,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 12 · DEMO -->
-<section class="slide slide--ink" data-eyebrow="Watch it run">
+<section class="slide slide--ink" data-eyebrow="What I built|Watch it run">
   <div class="bar"></div>
   <h2 class="sl-title">The terminal is not the story.<br>The movement of work is the story.</h2>
   <div class="demo-box">
@@ -489,7 +492,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 13 · THE BOTTLENECK MOVED -->
-<section class="slide slide--dark" data-eyebrow="What actually changed">
+<section class="slide slide--dark" data-eyebrow="What I built|What actually changed">
   <div class="bar"></div>
   <h2 class="sl-title">When the system does the doing,<br>you become the bottleneck.</h2>
   <div class="stat-row">
@@ -510,7 +513,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 1 · THE TRAP (BCG twist, 4 steps) -->
-<section class="slide slide--dark" data-eyebrow="The question every leader is asking" id="trapSlide">
+<section class="slide slide--dark" data-eyebrow="Where it goes|The question everyone's asking" id="trapSlide">
   <div class="bar"></div>
   <h2 class="sl-title">Where does AI go on the org chart?</h2>
   <p class="sl-lede">Most leaders answer literally: a job title, a seat, a box. A randomized study of 1,261 managers shows what happens when they do &mdash; in the organizations that have <em>already</em> put AI on the chart, naming agents as employees made managers catch fewer errors, pass more of the review to others, and quietly shift accountability off themselves and onto the machine.</p>
@@ -526,7 +529,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 <!-- 8 · ORG CHART → WORK GRAPH (3 steps) -->
 <section class="slide slide--ink" data-no-eyebrow id="ogSlide" style="flex-direction:row;align-items:center;gap:40px;">
   <div style="flex:1;min-width:0;">
-    <div class="eyebrow">The agent reports to a human</div>
+    <div class="eyebrow"><span class="eb-act">Where it goes</span><span class="eb-dot">·</span><span class="eb-sub">The agent reports to a human</span></div>
     <div class="bar"></div>
     <h2 class="sl-title" style="font-size:clamp(1.6rem,2.8vw,2.3rem);">The org chart answers<br>"who reports to whom."</h2>
     <p class="sl-lede" id="ogLede">It cannot answer how an outcome gets produced, where AI acts, where humans review, or who is accountable when an agent makes a mistake.</p>
@@ -562,7 +565,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- EVIDENCE · Evidence · ownership, live -->
-<section class="slide slide--ink" data-eyebrow="Evidence · ownership, live">
+<section class="slide slide--ink" data-eyebrow="Where it goes|Evidence · ownership, live">
   <div class="bar"></div>
   <h2 class="sl-title" style="font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:14px;">I told it to fix itself. It took ownership.</h2>
   <img class="ev-shot" src="assets/talk-evidence/own.png" alt="Agent taking ownership and iterating until correct">
@@ -570,7 +573,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 8b · HOW TO DO IT CORRECTLY -->
-<section class="slide slide--light" data-eyebrow="The prescription" data-logo="purple">
+<section class="slide slide--light" data-eyebrow="Where it goes|The prescription" data-logo="purple">
   <div class="bar"></div>
   <h2 class="sl-title" style="margin-bottom:8px;">How to put AI on the org chart, correctly</h2>
   <div class="cols" style="align-items:flex-start;">
@@ -602,7 +605,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- EVIDENCE · Evidence · governance, live -->
-<section class="slide slide--ink" data-eyebrow="Evidence · governance, live">
+<section class="slide slide--ink" data-eyebrow="Where it goes|Evidence · governance, live">
   <div class="bar"></div>
   <h2 class="sl-title" style="font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:14px;">The rules, running on their own.</h2>
   <img class="ev-shot" src="assets/talk-evidence/gov.png" alt="System running a PII check, classifying, and pushing to the right place">
@@ -612,12 +615,12 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 <!-- 14 · DIVIDER 04 -->
 <section class="slide slide--dark" data-no-eyebrow>
   <div class="deco d1"></div><div class="deco d2"></div>
-  <div class="divider-num">03 · What We Learned</div>
+  <div class="divider-num">03 · What I Learned</div>
   <div class="divider-title">Five lessons,<br>earned the hard way.</div>
 </section>
 
 <!-- 15 · FOUR LESSONS (4 steps) -->
-<section class="slide slide--dark" data-eyebrow="Lessons from the build" id="lessonsSlide">
+<section class="slide slide--dark" data-eyebrow="What I learned|Lessons from the build" id="lessonsSlide">
   <div class="bar"></div>
   <h2 class="sl-title" style="margin-bottom:0;">What we would tell you before you build</h2>
   <div class="lessons-wrap" id="lessonsWrap">
@@ -632,7 +635,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- EVIDENCE · Evidence · the learning loop -->
-<section class="slide slide--ink" data-eyebrow="Evidence · the learning loop">
+<section class="slide slide--ink" data-eyebrow="What I learned|Evidence · the learning loop">
   <div class="bar"></div>
   <h2 class="sl-title" style="font-size:clamp(1.4rem,2.4vw,2rem);margin-bottom:14px;">The loop, live.</h2>
   <img class="ev-shot" src="assets/talk-evidence/learn.png" alt="System flagging a recurring pattern and asking for feedback">
@@ -640,7 +643,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 16 · PLAYBOOK -->
-<section class="slide slide--purple" data-eyebrow="The Wednesday morning playbook">
+<section class="slide slide--purple" data-eyebrow="What I learned|The playbook">
   <div class="bar"></div>
   <h2 class="sl-title">Start with exactly one workflow.</h2>
   <div class="pb-list">
@@ -655,7 +658,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
 </section>
 
 <!-- 17 · CLOSE (3 steps) -->
-<section class="slide slide--dark" data-eyebrow="The close" id="closeSlide">
+<section class="slide slide--dark" data-eyebrow="What I learned|The close" id="closeSlide">
   <div class="bar"></div>
   <p class="close-line shown" id="close1">The winners will not be the companies with the most agents. They will be the organizations that turn <b>judgment into reusable context</b>, workflows into <b>learning systems</b>, and autonomy into something <b>earned</b>.</p>
   <p class="close-line" id="close2">So when someone asks where AI sits on your org chart, you now have the real answer: <b>it doesn't get a box. It gets an owner</b> &mdash; a human accountable for its work. The boxes stay human, because accountability stays human.</p>
@@ -707,7 +710,7 @@ h2.sl-title{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:700;line-height:1.1
     if(!s.hasAttribute('data-no-eyebrow')){
       var ey = document.createElement('div');
       ey.className = 'eyebrow';
-      ey.textContent = s.getAttribute('data-eyebrow') || '';
+      var _eb = s.getAttribute('data-eyebrow') || ''; if(_eb.indexOf('|')>-1){ var _p=_eb.split('|'); ey.innerHTML='<span class="eb-act">'+_p[0]+'</span><span class="eb-dot">·</span><span class="eb-sub">'+_p[1]+'</span>'; } else { ey.textContent=_eb; }
       var first = null;
       for(var i=0;i<s.children.length;i++){
         var c = s.children[i];
